@@ -1,0 +1,90 @@
+#wc-countdown-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: linear-gradient(90deg, #1a1206 0%, #2e2210 50%, #1a1206 100%);
+  border-bottom: 1px solid rgba(212, 168, 83, 0.25);
+  box-shadow: 0 4px 24px rgba(212, 168, 83, 0.08);
+}
+
+#wc-countdown-bar .wc-countdown-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#wc-countdown-bar .wc-countdown-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d4a853;
+  white-space: nowrap;
+}
+
+#wc-countdown-bar .wc-countdown-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#wc-countdown-bar .wc-countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 2.75rem;
+  padding: 0.15rem 0.4rem;
+  background: rgba(212, 168, 83, 0.08);
+  border: 1px solid rgba(212, 168, 83, 0.2);
+  border-radius: 0.375rem;
+}
+
+#wc-countdown-bar .wc-countdown-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff8e7;
+  font-variant-numeric: tabular-nums;
+}
+
+#wc-countdown-bar .wc-countdown-name {
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a69060;
+}
+
+#wc-countdown-bar .wc-countdown-sep {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d4a853;
+  padding-bottom: 0.5rem;
+}
+
+body.has-countdown nav.fixed,
+body.has-countdown header.fixed {
+  top: 2.75rem !important;
+}
+
+@media (max-width: 640px) {
+  #wc-countdown-bar .wc-countdown-inner {
+    gap: 0.5rem;
+    padding: 0.45rem 1rem;
+  }
+
+  #wc-countdown-bar .wc-countdown-unit {
+    min-width: 2.35rem;
+  }
+
+  #wc-countdown-bar .wc-countdown-value {
+    font-size: 0.85rem;
+  }
+}
